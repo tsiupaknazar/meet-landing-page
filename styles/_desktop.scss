@@ -1,0 +1,96 @@
+@media only screen and (min-width: 1270px) {
+  header {
+    margin-top: 80px;
+  }
+
+  main {
+    margin-top: 103px;
+    margin-bottom: 184px;
+  }
+
+  .hero {
+    position: relative;
+    margin-bottom: 117px;
+
+    & > img#hero-mobile {
+      display: none;
+    }
+
+    & > img#hero-left,
+    & > img#hero-right {
+      display: unset;
+      position: absolute;
+    }
+
+    & > img#hero-left {
+      left: -197px;
+      top: -47px;
+    }
+
+    & > img#hero-right {
+      right: -197px;
+      top: 7px;
+    }
+  }
+
+  .hero-description {
+    max-width: 540px;
+
+    & > h1 {
+      font-size: 64px;
+      line-height: 64px;
+      margin-bottom: 34px;
+    }
+
+    & > p {
+      font-size: 18px;
+      line-height: 26px;
+    }
+  }
+
+  .communication {
+    margin-top: 64px;
+  }
+
+  .gallery {
+    justify-content: space-between;
+    padding: 0;
+    margin-bottom: 81px;
+
+    & > img {
+      width: 255px;
+      height: 242px;
+    }
+  }
+
+  .communication-description {
+    max-width: 526px;
+
+    & > p {
+      font-size: 18px;
+    }
+  }
+
+  .footer-content {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding-top: 116px;
+    padding-bottom: 104px;
+
+    & > h1 {
+      max-width: 330px;
+      margin-bottom: 0;
+    }
+
+    & > p {
+      max-width: 388px;
+      margin: -11px 0 0 0;
+      padding-left: 45px;
+    }
+  }
+
+  footer::before {
+    background: url("/desktop/image-footer.jpg") no-repeat center center / cover;
+  }
+}

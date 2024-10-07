@@ -1,0 +1,246 @@
+@use "utils/variables" as v;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 18px;
+  background-color: v.$color-7;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+button {
+  border: none;
+  color: white;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 26px;
+  border-radius: 29px;
+  cursor: pointer;
+  height: 58px;
+  padding: 0;
+  width: 193px;
+}
+
+.container {
+  max-width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  margin-top: 48px;
+  text-align: center;
+}
+
+main {
+  margin: 48px 0 176px 0;
+  padding: 0 24px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 64px;
+
+  & > img#hero-mobile {
+    width: 414px;
+    height: 153px;
+    margin-left: -44px;
+  }
+
+  & > img#hero-left,
+  & > img#hero-right {
+    display: none;
+  }
+}
+
+.hero-description {
+  margin: 43px auto 0 auto;
+
+  & > h1 {
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 44px;
+    color: v.$color-3;
+    margin: 0 0 24px 0;
+    padding: 0 18px;
+  }
+
+  & > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: v.$color-4;
+    margin: 0 0 32px 0;
+  }
+
+  & > button#download {
+    margin-bottom: 16px;
+    background-color: v.$color-1;
+
+    & > span {
+      color: v.$color-5;
+    }
+  }
+
+  & > button#download:hover {
+    background-color: #71c0d4;
+  }
+
+  & > button#what-is {
+    background-color: v.$color-2;
+    width: 139px;
+  }
+
+  & > button#what-is:hover {
+    background-color: #b18bdd;
+  }
+}
+
+.divider {
+  text-align: center;
+
+  & > div {
+    border: 0.5px solid rgba(135, 135, 157, 0.25);
+    width: 1px;
+    height: 84px;
+    margin: auto;
+  }
+
+  & > p {
+    background: v.$color-7;
+    border: 1px solid rgba(135, 135, 157, 0.25);
+    border-radius: 29px;
+    color: v.$color-4;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+}
+
+.communication {
+  margin-top: 64px;
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px 0;
+  margin-bottom: 64px;
+
+  & > img {
+    border-radius: 8px;
+    width: 151px;
+    height: 143px;
+  }
+}
+
+.communication-description {
+  text-align: center;
+
+  & > h2 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 4px;
+    color: v.$color-1;
+    margin: 0 0 24px 0;
+  }
+
+  & > h1 {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+    color: v.$color-3;
+    margin: 0 0 32px 0;
+  }
+
+  & > p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    color: v.$color-4;
+    margin: 0;
+  }
+}
+
+footer {
+  position: relative;
+  background-color: v.$color-1;
+
+  & > .divider {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    top: -112px;
+  }
+}
+
+.footer-content {
+  color: v.$color-7;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  text-align: center;
+  padding: 92px 24px 72px 24px;
+  position: relative;
+
+  & > h1 {
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 36px;
+    margin: 0 0 24px 0;
+  }
+
+  & > p {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 26px;
+    margin: 0 0 32px 0;
+  }
+
+  & > button {
+    background-color: v.$color-2;
+
+    & > span {
+      color: v.$color-6;
+    }
+  }
+
+  & > button:hover {
+    background-color: #b18bdd;
+  }
+}
+
+footer::before {
+  content: " ";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.1;
+  background: url("/mobile/image-footer.jpg") no-repeat center center /
+    cover;
+}
+
+@media only screen and (max-width: 374px) {
+  .gallery {
+    justify-content: center;
+  }
+}
